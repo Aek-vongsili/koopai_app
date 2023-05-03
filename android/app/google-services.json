@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "915884030623",
+    "project_id": "sosmap-50f15",
+    "storage_bucket": "sosmap-50f15.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:915884030623:android:386203cdbba19149f640aa",
+        "android_client_info": {
+          "package_name": "com.example.app1623"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "915884030623-7feffaiafq30bg5n8a5gk36la4dnp642.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDqjgGz_dXOKjBf15rMUb6xpyN7wr-ehhE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "915884030623-7feffaiafq30bg5n8a5gk36la4dnp642.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
