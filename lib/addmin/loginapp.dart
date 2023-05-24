@@ -1,21 +1,18 @@
-import 'package:app1623/homscreen/homepage.dart';
-import 'package:app1623/login&signout/register.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
-import 'package:get/get.dart';
 
-class login extends StatefulWidget {
-  const login({super.key});
+class lohinappaddmin extends StatefulWidget {
+  const lohinappaddmin({super.key});
 
   @override
-  State<login> createState() => _loginState();
+  State<lohinappaddmin> createState() => _lohinappaddminState();
 }
 
-class _loginState extends State<login> {
+class _lohinappaddminState extends State<lohinappaddmin> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+     return Scaffold(
       backgroundColor: Colors.white,
       body: SingleChildScrollView(
         child: Center(
@@ -104,7 +101,7 @@ class _loginState extends State<login> {
                   ),
                 ),
                 onTap: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>hompage()));
+                 
                 },
               ),
               SizedBox(height: 10),
@@ -132,7 +129,7 @@ class _loginState extends State<login> {
                               color: Color(0xFF293275)),
                         ),
                         onTap: () {
-                           Navigator.push(context, MaterialPageRoute(builder: (context)=>register()));
+                          
                         },
                       ),
                     ],

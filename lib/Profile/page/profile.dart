@@ -1,24 +1,38 @@
-import 'dart:collection';
-
-import 'package:app1623/login&signout/confrime_User.dart';
-import 'package:app1623/login&signout/login.dart';
+import 'dart:io';
+import 'package:app1623/login&signout/page/login.dart';
+import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
-import 'package:get/get.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:intl/intl.dart';
 
-class register extends StatefulWidget {
-  const register({super.key});
+class Profile extends StatefulWidget {
+  const Profile({super.key});
 
   @override
-  State<register> createState() => _registerState();
+  State<Profile> createState() => _ProfileState();
 }
 
-class _registerState extends State<register> {
-  String dropdownvalue = 'Boy';
+class _ProfileState extends State<Profile> {
+  XFile? _image;
+  late String urlImag;
+  var imagepath;
+  ImagePicker? picker = ImagePicker();
+  List<CameraDescription> cameras = [];
+  Future getimage1() async {
+    final XFile? pickedFile = await picker!.pickImage(
+      source: ImageSource.camera,
+      maxWidth: 2000,
+      maxHeight: 2000,
+    );
+    setState(() {
+      _image = pickedFile!;
+      imagepath = _image!.path;
+    });
+    //profileUser();
+    //Get.to(Edit_account());
+  }
 
-  // List of items in our dropdown menu
+  String dropdownvalue = 'Boy';
   var items = ['Boy', 'Girls', 'Other'];
   late DateTime date = DateTime.now();
   late var day = DateFormat('EEEE').format(date);
@@ -29,15 +43,78 @@ class _registerState extends State<register> {
     double screenw = MediaQuery.of(context).size.width;
     double screenh = MediaQuery.of(context).size.height;
     return Scaffold(
-      backgroundColor: Colors.white,
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-    
+      appBar: AppBar(
+        leading: IconButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            icon: Icon(
+              Icons.arrow_back_ios,
+            )),
+        backgroundColor: Color(0xFF293275),
+        elevation: 0,
+        title: Center(child: Text('ໂປຣຟາຍ')),
+        actions: [
+          IconButton(
+            onPressed: () {
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => Login()));
+            },
+            icon:  Text('Logout')
+          )
+        ],
+      ),
+      floatingActionButton: FloatingActionButton.extended(
+        onPressed: () {
+          Navigator.pop(context);
+        },
+        label: const Text(
+          'ບັນທືກ',
+          style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+        ),
+        icon: const Icon(Icons.save),
+        backgroundColor: Color(0xFF293275),
+      ),
       body: SingleChildScrollView(
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               SizedBox(height: 70),
+              _image == null
+                  ? Container(
+                      height: 200,
+                      width: 200,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(100),
+                        border: Border.all(width: 1, color: Colors.grey),
+                      ),
+                      child: Image.asset('images/profile.png'),
+                    )
+                  : Container(
+                      height: 200,
+                      width: 200,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(100),
+                        border: Border.all(width: 1, color: Colors.grey),
+                      ),
+                      child: ClipRRect(
+                          borderRadius: BorderRadius.circular(100),
+                          child: Image.file(File(_image!.path))),
+                    ),
+
+              TextButton.icon(
+                  onPressed: () {
+                    getimage1();
+                  },
+                  icon: Icon(
+                    Icons.edit,
+                    color: Color(0xFF293275),
+                  ),
+                  label: Text('ແກ້ໄຂ',
+                      style:
+                          TextStyle(color: Color(0xFF293275), fontSize: 16))),
+              SizedBox(height: 10),
               Padding(
                 padding: const EdgeInsets.only(left: 20, right: 20),
                 child: Container(
@@ -207,48 +284,6 @@ class _registerState extends State<register> {
                   ),
                 ),
               ),
-              SizedBox(height: 20),
-              Padding(
-                padding: const EdgeInsets.only(left: 20, right: 20),
-                child: Container(
-                  height: 50,
-                  width: screenw,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    border: Border.all(width: 1, color: Colors.grey),
-                  ),
-                  child: Padding(
-                    padding: EdgeInsets.only(left: 10),
-                    child: TextField(
-                      decoration: InputDecoration(
-                          hintText: 'passwords', border: InputBorder.none),
-                    ),
-                  ),
-                ),
-              ),
-              SizedBox(height: screenw * 0.5),
-              GestureDetector(
-                child: Container(
-                  height: 60,
-                  width: screenw * 0.6,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      color: Color(0xFF293275)),
-                  child: Center(
-                    child: Text(
-                      'Register',
-                      style: TextStyle(
-                          fontSize: 14,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white),
-                    ),
-                  ),
-                ),
-                onTap: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => confrimlogin()));
-                },
-              )
             ],
           ),
         ),

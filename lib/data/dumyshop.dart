@@ -20,8 +20,8 @@ class Data {
       "name": "ສູນເຂດສີຖານ",
       "image":
           "https://image.shutterstock.com/image-photo/group-bombay-chat-food-includes-260nw-1422374822.jpg",
-      "lat": 17.971693,
-      "lng": 102.605878,
+      "lat": 17.961981,
+      'lng': 102.617326,
       "distance": 0,
     },
     {
@@ -31,7 +31,6 @@ class Data {
       "lng": 102.608327,
       "distance": 0,
     },
-     
     {
       "name": "ສູນເຂດນາຊາຍ",
       "image":

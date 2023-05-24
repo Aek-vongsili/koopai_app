@@ -39,28 +39,34 @@ class _accident_imageState extends State<accident_image> {
     double screenh = MediaQuery.of(context).size.height;
 
     return Scaffold(
+      backgroundColor: Color(0xFFFFFFFF),
       appBar: AppBar(
-        
         title: Center(
           child: Text('ຮູບອຸປະຕິເຫດ',
               style: TextStyle(
-                  fontSize: 16,
+                  fontSize: 25,
                   fontWeight: FontWeight.bold,
-                  color: Colors.white)),
+                  color: Color(0xFF555555))),
         ),
         elevation: 0,
-        backgroundColor: Color(0xFF293275),
+        backgroundColor: Color(0xFFEEEDF0),
         leading: GestureDetector(
           child: Icon(
             Icons.arrow_back_ios,
             size: 30,
-            color: Colors.white,
+            color: Color(0xff373737),
           ),
           onTap: () {
-            Navigator.pop(context);
+            Navigator.push(
+                context, MaterialPageRoute(builder: (context) => Hompage()));
           },
         ),
-        actions: [],
+        actions: [
+          Icon(
+            Icons.notifications,
+            color: Color(0xFFEEEDF0),
+          )
+        ],
       ),
       body: SingleChildScrollView(
         child: Center(
@@ -68,17 +74,23 @@ class _accident_imageState extends State<accident_image> {
             children: [
               _image == null
                   ? Container(
-                      margin: EdgeInsets.only(top: 50,),
+                      margin: EdgeInsets.only(
+                        top: 50,
+                      ),
                       height: 280,
-                    width: screenw * 0.9,
+                      width: screenw * 0.9,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
-                          border: Border.all(width: 1,   color: Color(0xff293275),)),
+                          border: Border.all(
+                            width: 2,
+                            color: Color(0xFF555555),
+                          ),
+                          color: Colors.white),
                     )
                   : Container(
                       margin: EdgeInsets.only(top: 50),
                       height: 280,
-                    width: screenw * 0.9,
+                      width: screenw * 0.9,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
                           border: Border.all(width: 1, color: Colors.grey)),
@@ -96,21 +108,28 @@ class _accident_imageState extends State<accident_image> {
                 width: screenw * 0.9,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
-                    border: Border.all(width: 1, color: Color(0xFF293275)),
+                    border: Border.all(width: 2, color: Color(0xFF555555)),
                     color: Colors.white),
                 child: Padding(
                   padding: EdgeInsets.only(left: 20),
                   child: TextField(
                     decoration: InputDecoration(
-                        label: Text('ລາຍລະອຽດເພີ່ມເຕີມ..'),
+                        label: Text('ລາຍລະອຽດເພີ່ມເຕີມ..',
+                            style: TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold,
+                                color: Color(0xFFBFC4CE))),
                         border: InputBorder.none),
                   ),
                 ),
               ),
               SizedBox(height: 40),
               GestureDetector(
-                  child: Icon(Icons.add_a_photo,
-                      size: 70, color: Color(0xff293275)),
+                  child: Icon(
+                    Icons.add_a_photo,
+                    size: 70,
+                    color: Color(0xFFFE2430),
+                  ),
                   onTap: () {
                     getimage1();
                   }),
@@ -140,7 +159,7 @@ class _accident_imageState extends State<accident_image> {
                     ),
                     onTap: () {
                       Navigator.pop(context);
-                      hompage();
+                      Hompage();
                     },
                   ),
                   SizedBox(width: 30),
@@ -151,7 +170,7 @@ class _accident_imageState extends State<accident_image> {
                       width: screenw * 0.3,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
-                          color: Color(0xff293275)),
+                          color: Color(0xffFE2430)),
                       child: Center(
                         child: Text(
                           'ຕໍ່ໄປ',
@@ -163,8 +182,72 @@ class _accident_imageState extends State<accident_image> {
                       ),
                     ),
                     onTap: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => ammulanc()));
+                    
+                        showDialog(
+                          context: context,
+                          builder: (BuildContext context) {
+                            return AlertDialog(
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(20)),
+                              backgroundColor: Colors.white,
+                              // title: Center(
+                              //     child: Text(
+                              //   "ແຈ້ງເຕືອນ.,",
+                              //   style: TextStyle(
+                              //     fontSize: 16,
+                              //     color: Color(0xff293275),
+                              //     fontWeight: FontWeight.bold,
+                              //   ),
+                              // )),
+                              content: Container(
+                                height: 150,
+                                width: 300,
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(20)),
+                                child: Column(
+                                  children: [
+                                    Text(
+                                      "ການແຈ້ງເຫດ ສຳເລັດແລ້ວ...!",
+                                      style: TextStyle(
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.bold,
+                                        color: Color(0xff293275),
+                                      ),
+                                    ),
+                                    Center(
+                                      child: ClipRRect(
+                                          borderRadius:
+                                              BorderRadius.circular(150),
+                                          child: Image.asset(
+                                            'icons/verify.gif',
+                                            width: 120,
+                                            height: 120,
+                                          )),
+                                    )
+                                  ],
+                                ),
+                              ),
+                              actions: [
+                                TextButton(
+                                  child: Text(
+                                    "ຕົກລົງ",
+                                    style: TextStyle(
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.bold,
+                                      color: Color(0xff293275),
+                                    ),
+                                  ),
+                                  onPressed: () {
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) => Hompage()));
+                                  },
+                                ),
+                              ],
+                            );
+                          },
+                        );
                     },
                   ),
                 ],
@@ -176,3 +259,4 @@ class _accident_imageState extends State<accident_image> {
     );
   }
 }
+

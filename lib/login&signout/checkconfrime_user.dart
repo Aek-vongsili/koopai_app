@@ -1,5 +1,5 @@
 import 'package:app1623/homscreen/homepage.dart';
-import 'package:app1623/login&signout/login.dart';
+import 'package:app1623/login&signout/page/login.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -96,7 +96,7 @@ class _checkconfrime_userState extends State<checkconfrime_user> {
                 ),
                 onTap: () {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => login()));
+                      MaterialPageRoute(builder: (context) => Login()));
                 },
               ),
              
