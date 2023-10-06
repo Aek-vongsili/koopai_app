@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "915884030623",
-    "project_id": "sosmap-50f15",
-    "storage_bucket": "sosmap-50f15.appspot.com"
+    "project_number": "48211850452",
+    "project_id": "my-project1632",
+    "storage_bucket": "my-project1632.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:915884030623:android:386203cdbba19149f640aa",
+        "mobilesdk_app_id": "1:48211850452:android:601efdaf00351b4617f741",
         "android_client_info": {
           "package_name": "com.example.app1623"
         }
       },
       "oauth_client": [
         {
-          "client_id": "915884030623-7feffaiafq30bg5n8a5gk36la4dnp642.apps.googleusercontent.com",
+          "client_id": "48211850452-923n8rj3cjd3bqf9ve17vqssqbae9kvh.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDqjgGz_dXOKjBf15rMUb6xpyN7wr-ehhE"
+          "current_key": "AIzaSyCuzPO_rzOPYEiv1rmm3CnapOrjSXHgKlM"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "915884030623-7feffaiafq30bg5n8a5gk36la4dnp642.apps.googleusercontent.com",
+              "client_id": "48211850452-923n8rj3cjd3bqf9ve17vqssqbae9kvh.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

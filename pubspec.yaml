@@ -46,6 +46,12 @@ dependencies:
   geolocator: ^7.0.0
   dio: ^5.1.1
   geocoding: ^2.0.0
+  flutter_otp_text_field: ^1.1.1
+  sms_autofill: ^2.3.0
+  url_launcher_ios: ^6.1.4
+  google_nav_bar: ^5.0.6
+  page_transition: ^2.0.9
+  loading_animation_widget: ^1.2.0+4
  
   
 
