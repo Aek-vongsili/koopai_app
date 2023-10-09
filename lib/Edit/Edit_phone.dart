@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 
 class Edit_phone extends StatefulWidget {
   const Edit_phone({super.key});
@@ -15,7 +13,7 @@ class _Edit_phoneState extends State<Edit_phone> {
   double screenw = MediaQuery.of(context).size.width;
     double screenh = MediaQuery.of(context).size.height;
     return Scaffold(
-      backgroundColor: Color(0xffEEEDF0),
+      backgroundColor: const Color(0xffEEEDF0),
       body: Container(
         color: Colors.white,
         child: Padding(
@@ -32,8 +30,8 @@ class _Edit_phoneState extends State<Edit_phone> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                         Container(
-                      margin: EdgeInsets.only(left: 0),
-                       child: Text(
+                      margin: const EdgeInsets.only(left: 0),
+                       child: const Text(
                           'PHONE',
                           style: TextStyle(
                               fontSize: 16,
@@ -41,18 +39,18 @@ class _Edit_phoneState extends State<Edit_phone> {
                               color: Color(0xff555555)),
                         ),
                      ),
-                     SizedBox(height: 10),
+                     const SizedBox(height: 10),
                       Container(
                         width: screenw * 0.8,
                         height: 60,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
-                            border: Border.all(width: 1, color: Color(0xff555555))),
+                            border: Border.all(width: 1, color: const Color(0xff555555))),
                             child: Padding(
                               padding: const EdgeInsets.only(left: 0),
                               child: TextFormField(
-                                style: TextStyle(fontSize: 18,),
-                                decoration: InputDecoration(
+                                style: const TextStyle(fontSize: 18,),
+                                decoration: const InputDecoration(
                                   label: Text('+85620'),
                                   border: InputBorder.none
                                 )
@@ -64,15 +62,15 @@ class _Edit_phoneState extends State<Edit_phone> {
                   ),
                 ],
               ),
-                 SizedBox(height: 100),
+                 const SizedBox(height: 100),
               Container(
-                margin: EdgeInsets.only(left: 20,right: 20),
+                margin: const EdgeInsets.only(left: 20,right: 20),
                 width: screenw,
                 height: 60,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
-                    color: Color(0xffFE2430)),
-                child: Center(
+                    color: const Color(0xffFE2430)),
+                child: const Center(
                     child: Text(
                   'Save',
                   style: TextStyle(

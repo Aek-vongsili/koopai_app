@@ -1,7 +1,5 @@
 import 'package:app1623/homscreen/HomeScreenpage.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:get/get.dart';
 
 import '../../complete The Emergency/page/Compleat_Health Emergency.dart';
@@ -15,14 +13,14 @@ class SelectEmergency extends StatefulWidget {
 }
 
 class _SelectEmergencyState extends State<SelectEmergency> {
-  bool _isInitialValue = true;
+  final bool _isInitialValue = true;
   @override
   Widget build(BuildContext context) {
     double screenw = MediaQuery.of(context).size.width;
     double screenh = MediaQuery.of(context).size.height;
 
     return Scaffold(
-      backgroundColor: Color(0xFFEEEDF0),
+      backgroundColor: const Color(0xFFEEEDF0),
       body: SingleChildScrollView(
         // padding: EdgeInsets.only(left: 20,right: 20,top: 40,bottom: 40),
         child: Center(
@@ -30,13 +28,13 @@ class _SelectEmergencyState extends State<SelectEmergency> {
             children: [
               AnimatedContainer(
                 duration: const Duration(milliseconds: 2),
-                color: Color(0xffEEEDF0),
+                color: const Color(0xffEEEDF0),
                 transform: _isInitialValue
                     ? Matrix4.identity()
                     : Matrix4.rotationX((45)),
                 child: Container(
                   
-                    margin: EdgeInsets.only(
+                    margin: const EdgeInsets.only(
                         left: 20, right: 20, top: 50, bottom: 27),
                     height: Get.height*.90,
                     width: 380,
@@ -65,11 +63,11 @@ class _SelectEmergencyState extends State<SelectEmergency> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => HomSreenpage()));
+                                    builder: (context) => const HomSreenpage()));
                           },
                         ),
-                        SizedBox(height: 0),
-                        Row(
+                        const SizedBox(height: 0),
+                        const Row(
                           children: [
                             Padding(padding: EdgeInsets.only(left: 24)),
                             Text('Select the',
@@ -77,8 +75,8 @@ class _SelectEmergencyState extends State<SelectEmergency> {
                                     fontSize: 44, color: Color(0xFF555555))),
                           ],
                         ),
-                        SizedBox(height: 0),
-                        Row(
+                        const SizedBox(height: 0),
+                        const Row(
                           children: [
                             Padding(padding: EdgeInsets.only(left: 24)),
                             Text('Emergency',
@@ -86,7 +84,7 @@ class _SelectEmergencyState extends State<SelectEmergency> {
                                     TextStyle(fontSize: 44, color: Colors.red)),
                           ],
                         ),
-                        SizedBox(height: 20),
+                        const SizedBox(height: 20),
                        Container(
                         height: Get.height*.68,
                         color: Colors.white,
@@ -99,7 +97,7 @@ class _SelectEmergencyState extends State<SelectEmergency> {
                               children: [
                                 GestureDetector(
                                   child: Container(
-                                    margin: EdgeInsets.only(
+                                    margin: const EdgeInsets.only(
                                        left: 20,
                                       top: 50,
                                     ),
@@ -109,29 +107,29 @@ class _SelectEmergencyState extends State<SelectEmergency> {
                                         borderRadius: BorderRadius.circular(10),
                                         border: Border.all(
                                           width: 2,
-                                          color: Color(0xFFEEEDF0),
+                                          color: const Color(0xFFEEEDF0),
                                         ),
-                                        color: Color(0xffFFEBEB)),
+                                        color: const Color(0xffFFEBEB)),
                                     child: Column(
                                       mainAxisAlignment: MainAxisAlignment.center,
                                       children: [
                                         Image.asset('icons/Group 50.png'),
-                                        Text('Road',
+                                        const Text('Road',
                                             style: TextStyle(
                                                 fontSize: 20, color: Colors.red)),
-                                        Text('Accident',
+                                        const Text('Accident',
                                             style: TextStyle(
                                                 fontSize: 20, color: Colors.red)),
                                       ],
                                     ),
                                   ),
                                   onTap: (){
-                                    Navigator.push(context, MaterialPageRoute(builder: (builder)=>Road_accident()));
+                                    Navigator.push(context, MaterialPageRoute(builder: (builder)=>const Road_accident()));
                                   },
                                 ),
                                 GestureDetector(
                                   child: Container(
-                                    margin: EdgeInsets.only(
+                                    margin: const EdgeInsets.only(
                                       right: 20,
                                  
                                       top: 50,
@@ -142,17 +140,17 @@ class _SelectEmergencyState extends State<SelectEmergency> {
                                         borderRadius: BorderRadius.circular(10),
                                         border: Border.all(
                                           width: 2,
-                                          color: Color(0xffFFEBEB),
+                                          color: const Color(0xffFFEBEB),
                                         ),
-                                        color: Color(0xffFFEBEB)),
+                                        color: const Color(0xffFFEBEB)),
                                     child: Column(
                                       mainAxisAlignment: MainAxisAlignment.center,
                                       children: [
                                         Image.asset('icons/Group 47.png'),
-                                        Text('Health',
+                                        const Text('Health',
                                             style: TextStyle(
                                                 fontSize: 20, color: Colors.red)),
-                                        Text('Accident',
+                                        const Text('Accident',
                                             style: TextStyle(
                                                 fontSize: 20, color: Colors.red)),
                                       ],
@@ -163,7 +161,7 @@ class _SelectEmergencyState extends State<SelectEmergency> {
                                         context,
                                         MaterialPageRoute(
                                             builder: (context) =>
-                                              Health_emercy() ));
+                                              const Health_emercy() ));
                                   },
                                 ),
                               ],
@@ -179,7 +177,7 @@ class _SelectEmergencyState extends State<SelectEmergency> {
                             children: [
                               GestureDetector(
                                 child: Container(
-                                  margin: EdgeInsets.only(
+                                  margin: const EdgeInsets.only(
                                   left: 20,
                                     top: 21
                                   
@@ -190,29 +188,29 @@ class _SelectEmergencyState extends State<SelectEmergency> {
                                       borderRadius: BorderRadius.circular(10),
                                       border: Border.all(
                                         width: 2,
-                                        color: Color(0xFFEEEDF0),
+                                        color: const Color(0xFFEEEDF0),
                                       ),
-                                      color: Color(0xffFFEBEB)),
+                                      color: const Color(0xffFFEBEB)),
                                   child: Column(
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
                                       Image.asset('icons/Fire.png'),
-                                      Text('Fire',
+                                      const Text('Fire',
                                           style: TextStyle(
                                               fontSize: 20, color: Colors.red)),
-                                      Text('Emergency',
+                                      const Text('Emergency',
                                           style: TextStyle(
                                               fontSize: 20, color: Colors.red)),
                                     ],
                                   ),
                                 ),
                                 onTap: (){
-                                  Navigator.push(context, MaterialPageRoute(builder: (builder)=>Road_accident()));
+                                  Navigator.push(context, MaterialPageRoute(builder: (builder)=>const Road_accident()));
                                 },
                               ),
                               GestureDetector(
                                 child: Container(
-                                  margin: EdgeInsets.only(
+                                  margin: const EdgeInsets.only(
                                     right:20,
                                     left: 20,
                                     top: 15
@@ -225,17 +223,17 @@ class _SelectEmergencyState extends State<SelectEmergency> {
                                       borderRadius: BorderRadius.circular(10),
                                       border: Border.all(
                                         width: 2,
-                                        color: Color(0xffFFEBEB),
+                                        color: const Color(0xffFFEBEB),
                                       ),
-                                      color: Color(0xffFFEBEB)),
+                                      color: const Color(0xffFFEBEB)),
                                   child: Column(
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
                                       Image.asset('icons/Drowning.png'),
-                                      Text('Drowning',
+                                      const Text('Drowning',
                                           style: TextStyle(
                                               fontSize: 20, color: Colors.red)),
-                                      Text('Emergency',
+                                      const Text('Emergency',
                                           style: TextStyle(
                                               fontSize: 20, color: Colors.red)),
                                     ],
@@ -246,7 +244,7 @@ class _SelectEmergencyState extends State<SelectEmergency> {
                                       context,
                                       MaterialPageRoute(
                                           builder: (context) =>
-                                            Health_emercy() ));
+                                            const Health_emercy() ));
                                 },
                               ),
                             ],
@@ -263,7 +261,7 @@ class _SelectEmergencyState extends State<SelectEmergency> {
                             children: [
                               GestureDetector(
                                 child: Container(
-                                  margin: EdgeInsets.only(
+                                  margin: const EdgeInsets.only(
                                   left: 20,
                                     top: 21
                                   
@@ -274,29 +272,29 @@ class _SelectEmergencyState extends State<SelectEmergency> {
                                       borderRadius: BorderRadius.circular(10),
                                       border: Border.all(
                                         width: 2,
-                                        color: Color(0xFFEEEDF0),
+                                        color: const Color(0xFFEEEDF0),
                                       ),
-                                      color: Color(0xffFFEBEB)),
+                                      color: const Color(0xffFFEBEB)),
                                   child: Column(
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
                                       Image.asset('icons/carhost.png'),
-                                      Text('Ambolance',
+                                      const Text('Ambolance',
                                           style: TextStyle(
                                               fontSize: 20, color: Colors.red)),
-                                      Text('Service',
+                                      const Text('Service',
                                           style: TextStyle(
                                               fontSize: 20, color: Colors.red)),
                                     ],
                                   ),
                                 ),
                                 onTap: (){
-                                  Navigator.push(context, MaterialPageRoute(builder: (builder)=>Road_accident()));
+                                  Navigator.push(context, MaterialPageRoute(builder: (builder)=>const Road_accident()));
                                 },
                               ),
                               GestureDetector(
                                 child: Container(
-                                  margin: EdgeInsets.only(
+                                  margin: const EdgeInsets.only(
                                     right:20,
                                     left: 20,
                                     top: 15
@@ -309,17 +307,17 @@ class _SelectEmergencyState extends State<SelectEmergency> {
                                       borderRadius: BorderRadius.circular(10),
                                       border: Border.all(
                                         width: 2,
-                                        color: Color(0xffFFEBEB),
+                                        color: const Color(0xffFFEBEB),
                                       ),
-                                      color: Color(0xffFFEBEB)),
+                                      color: const Color(0xffFFEBEB)),
                                   child: Column(
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
                                       Image.asset('icons/Group 109.png'),
-                                      Text('Insurance',
+                                      const Text('Insurance',
                                           style: TextStyle(
                                               fontSize: 20, color: Colors.red)),
-                                      Text('Seurvice',
+                                      const Text('Seurvice',
                                           style: TextStyle(
                                               fontSize: 20, color: Colors.red)),
                                     ],
@@ -330,7 +328,7 @@ class _SelectEmergencyState extends State<SelectEmergency> {
                                       context,
                                       MaterialPageRoute(
                                           builder: (context) =>
-                                            Health_emercy() ));
+                                            const Health_emercy() ));
                                 },
                               ),
                             ],
@@ -340,7 +338,7 @@ class _SelectEmergencyState extends State<SelectEmergency> {
                             children: [
                               GestureDetector(
                                 child: Container(
-                                  margin: EdgeInsets.only(
+                                  margin: const EdgeInsets.only(
                                   left: 20,
                                     top: 21
                                   
@@ -351,24 +349,24 @@ class _SelectEmergencyState extends State<SelectEmergency> {
                                       borderRadius: BorderRadius.circular(10),
                                       border: Border.all(
                                         width: 2,
-                                        color: Color(0xFFEEEDF0),
+                                        color: const Color(0xFFEEEDF0),
                                       ),
-                                      color: Color(0xffFFEBEB)),
+                                      color: const Color(0xffFFEBEB)),
                                   child: Column(
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
                                       Image.asset('icons/Fire.png'),
-                                      Text('Towtruck',
+                                      const Text('Towtruck',
                                           style: TextStyle(
                                               fontSize: 20, color: Colors.red)),
-                                      Text('Service',
+                                      const Text('Service',
                                           style: TextStyle(
                                               fontSize: 20, color: Colors.red)),
                                     ],
                                   ),
                                 ),
                                 onTap: (){
-                                  Navigator.push(context, MaterialPageRoute(builder: (builder)=>Road_accident()));
+                                  Navigator.push(context, MaterialPageRoute(builder: (builder)=>const Road_accident()));
                                 },
                               ),
                               
@@ -380,7 +378,7 @@ class _SelectEmergencyState extends State<SelectEmergency> {
                         ),
                         
                        ),
-                        SizedBox(height: 2),
+                        const SizedBox(height: 2),
                       ],
                     )),
               )

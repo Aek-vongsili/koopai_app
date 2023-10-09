@@ -39,7 +39,7 @@ class _HomSreenpageState extends State<HomSreenpage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFFEEEDF0),
+      backgroundColor: const Color(0xFFEEEDF0),
 
 /////################////////////////////
 
@@ -49,7 +49,7 @@ class _HomSreenpageState extends State<HomSreenpage> {
         child: _widgetOptions.elementAt(_selectedIndex),
       ),
       bottomNavigationBar: Container(
-        margin: EdgeInsets.only(left: 10, right: 10, bottom: 20),
+        margin: const EdgeInsets.only(left: 10, right: 10, bottom: 20),
 
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
@@ -65,11 +65,11 @@ class _HomSreenpageState extends State<HomSreenpage> {
               gap: 8,
               activeColor: Colors.white,
               iconSize: 240,
-              padding: EdgeInsets.symmetric(
+              padding: const EdgeInsets.symmetric(
                 horizontal: 20,
                 vertical: 12,
               ),
-              duration: Duration(milliseconds: 100),
+              duration: const Duration(milliseconds: 100),
               tabBackgroundColor: Colors.red,
               color: Colors.black,
               tabs: [
@@ -173,14 +173,14 @@ class _PagerouteState extends State<Pageroute> {
   //////////////////////
 
   bool _isInitialValue = true;
-  bool _isnitselectpage = true;
+  final bool _isnitselectpage = true;
 
   @override
   Widget build(BuildContext context) {
     double screenw = MediaQuery.of(context).size.width;
     double screenh = MediaQuery.of(context).size.height;
     return Scaffold(
-        backgroundColor: Color(0xFFEEEDF0),
+        backgroundColor: const Color(0xFFEEEDF0),
 
         // drawer: Drower(),
 
@@ -190,13 +190,13 @@ class _PagerouteState extends State<Pageroute> {
               child:
                   //##################Profile ###############//
                   Container(
-                color: Color(0xffEEEDF0),
+                color: const Color(0xffEEEDF0),
                 child: Column(
                   children: [
                     //############# Message home ##################//
-                    SizedBox(height: 47),
+                    const SizedBox(height: 47),
 
-                    Center(
+                    const Center(
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
@@ -219,8 +219,8 @@ class _PagerouteState extends State<Pageroute> {
                         ],
                       ),
                     ),
-                    SizedBox(height: 100),
-                    Center(
+                    const SizedBox(height: 100),
+                    const Center(
                         child: Text(
                       'Please press button below',
                       style: TextStyle(
@@ -228,7 +228,7 @@ class _PagerouteState extends State<Pageroute> {
                           fontFamily: 'fonts/bahnschrift_0.ttf',
                           color: Color(0xFF555555)),
                     )),
-                    Center(
+                    const Center(
                       child: Text(
                         'to get help from rescue',
                         style: TextStyle(
@@ -239,28 +239,28 @@ class _PagerouteState extends State<Pageroute> {
                     ),
 
                     //#################buttom active#######################//
-                    SizedBox(height: 54),
+                    const SizedBox(height: 54),
 
                     Stack(children: [
                       Container(
                         width: 301,
                         height: 301,
-                        color: Color(0xFFEEEDF0),
+                        color: const Color(0xFFEEEDF0),
                         child: GestureDetector(
                           child: Container(
                             width: screenw*30,
                             height: screenh*30,
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(150),
-                                gradient: RadialGradient(
+                                gradient: const RadialGradient(
                                   colors: [
                                     Color(0xFFFE2430),
                                     Color(0xFFFE2430),
                                     Color(0xFFEEEDF0),
                                   ],
                                 ),
-                                color: Color(0xFFEEEDF0)),
-                            child: Center(
+                                color: const Color(0xFFEEEDF0)),
+                            child: const Center(
                               child: Text(
                                 'SOS',
                                 style: TextStyle(
@@ -272,7 +272,7 @@ class _PagerouteState extends State<Pageroute> {
                             ),
                           ),
                           onTap: () {
-                            Navigator.push(context, MaterialPageRoute(builder: (context)=>SelectEmergency()));
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=>const SelectEmergency()));
                             
                           },
                         ),
@@ -280,7 +280,7 @@ class _PagerouteState extends State<Pageroute> {
                     ]),
 
 //##########################  map Location containner ##############//
-                    SizedBox(height: 60),
+                    const SizedBox(height: 60),
                     GestureDetector(
                       child: Container(
                           height: 106,
@@ -304,8 +304,8 @@ class _PagerouteState extends State<Pageroute> {
                                               Image.asset('icons/Group 17.png'))
                                     ],
                                   ),
-                                  SizedBox(width: 12),
-                                  Column(
+                                  const SizedBox(width: 12),
+                                  const Column(
                                     crossAxisAlignment:
                                         CrossAxisAlignment.start,
                                     mainAxisAlignment: MainAxisAlignment.center,
@@ -359,13 +359,13 @@ class _PagerouteState extends State<Pageroute> {
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
                           color: Colors.white),
-                      duration: Duration(milliseconds: 5),
+                      duration: const Duration(milliseconds: 5),
                       height: status == true ? 80 : 750,
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           AnimatedContainer(
-                            duration: Duration(milliseconds: 500),
+                            duration: const Duration(milliseconds: 500),
                             transform: Matrix4.translationValues(_p, _p, 0),
                             child: status == true
                                 ? Row(
@@ -374,7 +374,7 @@ class _PagerouteState extends State<Pageroute> {
                                     children: [
                                       _image == null
                                           ? Container(
-                                              margin: EdgeInsets.only(
+                                              margin: const EdgeInsets.only(
                                                   left: 20, top: 10),
                                               height: status == false ? 60 : 56,
                                               width: status == false ? 60 : 56,
@@ -384,7 +384,7 @@ class _PagerouteState extends State<Pageroute> {
                                               ),
                                             )
                                           : Container(
-                                              margin: EdgeInsets.only(
+                                              margin: const EdgeInsets.only(
                                                   left: 20, top: 10),
                                               height: status == false ? 65 : 56,
                                               width: status == false ? 65 : 56,
@@ -392,8 +392,8 @@ class _PagerouteState extends State<Pageroute> {
                                                   child: Image.file(
                                                       File(_image!.path))),
                                             ),
-                                      SizedBox(width: 10),
-                                      Column(
+                                      const SizedBox(width: 10),
+                                      const Column(
                                         crossAxisAlignment:
                                             CrossAxisAlignment.start,
                                         children: [
@@ -415,7 +415,7 @@ class _PagerouteState extends State<Pageroute> {
                                     children: [
                                       _image == null
                                           ? Container(
-                                              margin: EdgeInsets.only(top: 20),
+                                              margin: const EdgeInsets.only(top: 20),
                                               height:
                                                   status == false ? 100 : 56,
                                               width: status == false ? 100 : 56,
@@ -426,7 +426,7 @@ class _PagerouteState extends State<Pageroute> {
                                                 width: 100,
                                               ),
                                             )
-                                          : Container(
+                                          : SizedBox(
                                               height:
                                                   status == false ? 100 : 56,
                                               width: status == false ? 100 : 56,
@@ -437,14 +437,14 @@ class _PagerouteState extends State<Pageroute> {
                                                   child: Image.file(
                                                       File(_image!.path))),
                                             ),
-                                      SizedBox(height: 10),
-                                      Text(
+                                      const SizedBox(height: 10),
+                                      const Text(
                                         'Kettakoun',
                                         style: TextStyle(
                                             fontSize: 16,
                                             color: Color(0xff555555)),
                                       ),
-                                      SizedBox(height: 10),
+                                      const SizedBox(height: 10),
                                       Padding(
                                         padding: const EdgeInsets.only(
                                             right: 20, left: 20),
@@ -459,23 +459,23 @@ class _PagerouteState extends State<Pageroute> {
                                             mainAxisAlignment:
                                                 MainAxisAlignment.spaceBetween,
                                             children: [
-                                              Text('Name'),
-                                              Text('Kettakoun'),
+                                              const Text('Name'),
+                                              const Text('Kettakoun'),
                                               IconButton(
                                                   onPressed: () {
                                                     Navigator.push(
                                                         context,
                                                         MaterialPageRoute(
                                                             builder: (context) =>
-                                                                Edit_name()));
+                                                                const Edit_name()));
                                                   },
-                                                  icon: Icon(
+                                                  icon: const Icon(
                                                       Icons.arrow_forward_ios))
                                             ],
                                           ),
                                         ),
                                       ),
-                                      SizedBox(height: 20),
+                                      const SizedBox(height: 20),
                                       Padding(
                                         padding: const EdgeInsets.only(
                                             right: 20, left: 20),
@@ -490,23 +490,23 @@ class _PagerouteState extends State<Pageroute> {
                                             mainAxisAlignment:
                                                 MainAxisAlignment.spaceBetween,
                                             children: [
-                                              Text('Surname'),
-                                              Text('Kounlavong'),
+                                              const Text('Surname'),
+                                              const Text('Kounlavong'),
                                               IconButton(
                                                   onPressed: () {
                                                     Navigator.push(
                                                         context,
                                                         MaterialPageRoute(
                                                             builder: (context) =>
-                                                                Edit_name()));
+                                                                const Edit_name()));
                                                   },
-                                                  icon: Icon(
+                                                  icon: const Icon(
                                                       Icons.arrow_forward_ios))
                                             ],
                                           ),
                                         ),
                                       ),
-                                      SizedBox(height: 20),
+                                      const SizedBox(height: 20),
                                       Padding(
                                         padding: const EdgeInsets.only(
                                             right: 20, left: 20),
@@ -521,23 +521,23 @@ class _PagerouteState extends State<Pageroute> {
                                             mainAxisAlignment:
                                                 MainAxisAlignment.spaceBetween,
                                             children: [
-                                              Text('Phone'),
-                                              Text('+8562056555550'),
+                                              const Text('Phone'),
+                                              const Text('+8562056555550'),
                                               IconButton(
                                                   onPressed: () {
                                                     Navigator.push(
                                                         context,
                                                         MaterialPageRoute(
                                                             builder: (context) =>
-                                                                Edit_phone()));
+                                                                const Edit_phone()));
                                                   },
-                                                  icon: Icon(
+                                                  icon: const Icon(
                                                       Icons.arrow_forward_ios))
                                             ],
                                           ),
                                         ),
                                       ),
-                                      SizedBox(height: 20),
+                                      const SizedBox(height: 20),
                                       Padding(
                                         padding: const EdgeInsets.only(
                                             left: 20, right: 20),
@@ -552,8 +552,8 @@ class _PagerouteState extends State<Pageroute> {
                                             mainAxisAlignment:
                                                 MainAxisAlignment.spaceBetween,
                                             children: [
-                                              Text('ID or Passport'),
-                                              Text('0561567'),
+                                              const Text('ID or Passport'),
+                                              const Text('0561567'),
                                               IconButton(
                                                   onPressed: () {
                                                     Navigator.push(
@@ -561,22 +561,22 @@ class _PagerouteState extends State<Pageroute> {
                                                         MaterialPageRoute(
                                                             builder:
                                                                 (context) =>
-                                                                    Edit_id()));
+                                                                    const Edit_id()));
                                                   },
-                                                  icon: Icon(
+                                                  icon: const Icon(
                                                       Icons.arrow_forward_ios))
                                             ],
                                           ),
                                         ),
                                       ),
-                                      SizedBox(height: 10),
+                                      const SizedBox(height: 10),
                                       Container(
                                         width: 336,
                                         height: 181,
                                         decoration: BoxDecoration(
                                           borderRadius:
                                               BorderRadius.circular(20),
-                                          color: Color(0xffEEEDF0),
+                                          color: const Color(0xffEEEDF0),
                                         ),
                                         child: Center(
                                           child: Column(
@@ -590,35 +590,35 @@ class _PagerouteState extends State<Pageroute> {
                                                   getimage1();
                                                 },
                                               ),
-                                              SizedBox(height: 14.75),
-                                              Text(
+                                              const SizedBox(height: 14.75),
+                                              const Text(
                                                   'Take Your ID or Passport Photo')
                                             ],
                                           ),
                                         ),
                                       ),
-                                      SizedBox(height: 20),
+                                      const SizedBox(height: 20),
                                       Container(
                                         height: 48,
                                         width: 334,
                                         decoration: BoxDecoration(
                                             borderRadius:
                                                 BorderRadius.circular(10),
-                                            color: Color(0xffFFEBEB)),
-                                        child: Center(
+                                            color: const Color(0xffFFEBEB)),
+                                        child: const Center(
                                             child: Text('Logout',
                                                 style: TextStyle(
                                                     color: Colors.red))),
                                       ),
-                                      SizedBox(height: 10),
+                                      const SizedBox(height: 10),
                                       Container(
                                         height: 48,
                                         width: 334,
                                         decoration: BoxDecoration(
                                             borderRadius:
                                                 BorderRadius.circular(10),
-                                            color: Color(0xFFFE2430)),
-                                        child: Center(
+                                            color: const Color(0xFFFE2430)),
+                                        child: const Center(
                                             child: Text(
                                           'Delete Account',
                                           style: TextStyle(color: Colors.white),

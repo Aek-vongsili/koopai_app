@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 
 class Setting_app extends StatefulWidget {
   const Setting_app({super.key});
@@ -10,7 +8,7 @@ class Setting_app extends StatefulWidget {
 }
 
 class _Setting_appState extends State<Setting_app> {
-  bool _isInitialValue = true;
+  final bool _isInitialValue = true;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,13 +17,13 @@ class _Setting_appState extends State<Setting_app> {
           children: [
             AnimatedContainer(
                 duration: const Duration(milliseconds: 5),
-                color: Color(0xffEEEDF0),
+                color: const Color(0xffEEEDF0),
                 transform: _isInitialValue
                     ? Matrix4.identity()
                     : Matrix4.rotationX((45)),
                 child: Container(
                   margin:
-                      EdgeInsets.only(left: 24, right: 24, top: 50, bottom: 27),
+                      const EdgeInsets.only(left: 24, right: 24, top: 50, bottom: 27),
                   height: 750,
                   width: 382,
                   decoration: BoxDecoration(
@@ -37,7 +35,7 @@ class _Setting_appState extends State<Setting_app> {
                           const EdgeInsets.only(left: 24, right: 24, top: 33),
                       child: Column(
                         children: [
-                          Center(
+                          const Center(
                             child: Text(
                               'Notifications',
                               style: TextStyle(
@@ -46,7 +44,7 @@ class _Setting_appState extends State<Setting_app> {
                                   color: Colors.grey),
                             ),
                           ),
-                          SizedBox(height: 45),
+                          const SizedBox(height: 45),
                           Container(
                             child: Column(
                               children: [
@@ -61,15 +59,15 @@ class _Setting_appState extends State<Setting_app> {
                                               BorderRadius.circular(5),
                                           color: Colors.red),
                                     ),
-                                    SizedBox(width: 05),
-                                    Text(
+                                    const SizedBox(width: 05),
+                                    const Text(
                                       'Yesterday 16:34',
                                       style:
                                           TextStyle(color: Color(0xffBFC4CE)),
                                     ),
                                   ],
                                 ),
-                                Row(
+                                const Row(
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
                                   children: [
@@ -78,7 +76,7 @@ class _Setting_appState extends State<Setting_app> {
                                     )
                                   ],
                                 ),
-                                Row(
+                                const Row(
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
                                   children: [
@@ -88,7 +86,7 @@ class _Setting_appState extends State<Setting_app> {
                               ],
                             ),
                           ),
-                          SizedBox(height: 32),
+                          const SizedBox(height: 32),
                           Container(
                               child: Column(
                             children: [
@@ -102,11 +100,11 @@ class _Setting_appState extends State<Setting_app> {
                                         borderRadius: BorderRadius.circular(5),
                                         color: Colors.red),
                                   ),
-                                  SizedBox(width: 05),
-                                  Text('yesterday 16:34',style: TextStyle(color: Color(0xffBFC4CE)),),
+                                  const SizedBox(width: 05),
+                                  const Text('yesterday 16:34',style: TextStyle(color: Color(0xffBFC4CE)),),
                                 ],
                               ),
-                              Row(
+                              const Row(
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceBetween,
                                 children: [
@@ -115,14 +113,14 @@ class _Setting_appState extends State<Setting_app> {
                                      
                                 ],
                               ),
-                              Row(
+                              const Row(
                                 children: [
                                   Text('Recue team is on the way going to your?'),
                                 ],
                               )
                             ],
                           )),
-                           SizedBox(height: 32),
+                           const SizedBox(height: 32),
                           Container(
                               child: Column(
                             children: [
@@ -136,11 +134,11 @@ class _Setting_appState extends State<Setting_app> {
                                         borderRadius: BorderRadius.circular(5),
                                         color: Colors.red),
                                   ),
-                                  SizedBox(width: 05),
-                                  Text('24/05/23  16:36',style: TextStyle(color: Color(0xffBFC4CE)),),
+                                  const SizedBox(width: 05),
+                                  const Text('24/05/23  16:36',style: TextStyle(color: Color(0xffBFC4CE)),),
                                 ],
                               ),
-                              Row(
+                              const Row(
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceBetween,
                                 children: [
@@ -149,7 +147,7 @@ class _Setting_appState extends State<Setting_app> {
                                      
                                 ],
                               ),
-                              Row(
+                              const Row(
                                 children: [
                                   Text('accepted'),
                                 ],

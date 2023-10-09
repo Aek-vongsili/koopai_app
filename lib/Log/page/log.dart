@@ -1,8 +1,4 @@
-import 'package:app1623/homscreen/HomeScreenpage.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
-import 'package:google_nav_bar/google_nav_bar.dart';
 
 class Log extends StatefulWidget {
   const Log({super.key});
@@ -18,7 +14,7 @@ class _LogState extends State<Log> {
         status = !status;
         status == false ? _p = 1 : _p = 0;
       });
-  bool _isInitialValue = true;
+  final bool _isInitialValue = true;
   @override
   Widget build(BuildContext context) {
     double screenw = MediaQuery.of(context).size.width;
@@ -30,12 +26,12 @@ class _LogState extends State<Log> {
           children: [
             AnimatedContainer(
                 duration: const Duration(milliseconds: 5),
-                color: Color(0xffEEEDF0),
+                color: const Color(0xffEEEDF0),
                 transform: _isInitialValue
                     ? Matrix4.identity()
                     : Matrix4.rotationX((45)),
                 child: Container(
-                    margin: EdgeInsets.only(
+                    margin: const EdgeInsets.only(
                         left: 24, right: 24, top: 50, bottom: 27),
                     height: 750,
                     width: 382,
@@ -48,7 +44,7 @@ class _LogState extends State<Log> {
                             const EdgeInsets.only(left: 24, right: 24, top: 33),
                         child: Column(
                           children: [
-                            Center(
+                            const Center(
                               child: Text(
                                 'Ativity Log',
                                 style: TextStyle(
@@ -57,9 +53,9 @@ class _LogState extends State<Log> {
                                     color: Colors.grey),
                               ),
                             ),
-                            SizedBox(height: 45),
+                            const SizedBox(height: 45),
                             Container(
-                              child: Column(
+                              child: const Column(
                                 children: [
                                   Row(
                                     mainAxisAlignment:
@@ -90,9 +86,9 @@ class _LogState extends State<Log> {
                                 ],
                               ),
                             ),
-                            SizedBox(height: 32),
+                            const SizedBox(height: 32),
                             Container(
-                                child: Column(
+                                child: const Column(
                               children: [
                                 Row(
                                   mainAxisAlignment:

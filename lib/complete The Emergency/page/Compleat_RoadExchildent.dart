@@ -33,7 +33,7 @@ class Road_accidentState extends State<Road_accident> {
     //Get.to(Edit_account());
   }
 
-  bool _isInitialValue = true;
+  final bool _isInitialValue = true;
 
   @override
   Widget build(BuildContext context) {
@@ -41,7 +41,7 @@ class Road_accidentState extends State<Road_accident> {
     double screenh = MediaQuery.of(context).size.height;
 
     return Scaffold(
-      backgroundColor: Color(0xFFEEEDF0),
+      backgroundColor: const Color(0xFFEEEDF0),
       body: SingleChildScrollView(
         // padding: EdgeInsets.only(left: 20,right: 20,top: 40,bottom: 40),
         child: Center(
@@ -49,12 +49,12 @@ class Road_accidentState extends State<Road_accident> {
             children: [
               AnimatedContainer(
                 duration: const Duration(milliseconds: 5),
-                color: Color(0xffEEEDF0),
+                color: const Color(0xffEEEDF0),
                 transform: _isInitialValue
                     ? Matrix4.identity()
                     : Matrix4.rotationX((45)),
                 child: Container(
-                    margin: EdgeInsets.only(
+                    margin: const EdgeInsets.only(
                         left: 24, right: 24, top: 50, bottom: 27),
                     height: 864,
                     width: 382,
@@ -83,15 +83,15 @@ class Road_accidentState extends State<Road_accident> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => SelectEmergency()));
+                                    builder: (context) => const SelectEmergency()));
                           },
                         ),
-                        SizedBox(height: 20),
+                        const SizedBox(height: 20),
                         Row(
                           children: [
                             Container(
-                              margin: EdgeInsets.only(left: 24),
-                              child: Column(
+                              margin: const EdgeInsets.only(left: 24),
+                              child: const Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text('Complete the',
@@ -111,14 +111,14 @@ class Road_accidentState extends State<Road_accident> {
                           ],
                         ),
                         Container(
-                          margin: EdgeInsets.only(top: 20, right: 20, left: 20),
+                          margin: const EdgeInsets.only(top: 20, right: 20, left: 20),
                           height: 149,
                           width: screenw * 0.9,
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10),
                               border: Border.all(
-                                  width: 2, color: Color(0xFFEEEDF0)),
-                               color: Color(0xFFEEEDF0)),
+                                  width: 2, color: const Color(0xFFEEEDF0)),
+                               color: const Color(0xFFEEEDF0)),
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
@@ -128,25 +128,25 @@ class Road_accidentState extends State<Road_accident> {
                             height: 80,
                             decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(150),
-                                    gradient: RadialGradient(
+                                    gradient: const RadialGradient(
                                       colors: [
                                         Color(0xFFFE2430),
                                         Color(0xFFFE2430),
                                         Color(0xFFEEEDF0),
                                       ],
                                     ),
-                                    color: Color(0xFFEEEDF0)),
+                                    color: const Color(0xFFEEEDF0)),
                             child: Center(
                                   child: Image.asset('icons/radio.png'),
                                   
                             ),
                           ),),
-                          Text('Press here to record voice',style: TextStyle(color: Colors.grey),)
+                          const Text('Press here to record voice',style: TextStyle(color: Colors.grey),)
                                 ],
                               ),
                          
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 20,
                         ),
                         Row(
@@ -161,8 +161,8 @@ class Road_accidentState extends State<Road_accident> {
                                     MainAxisAlignment.spaceBetween,
                                 children: [
                                   Container(
-                                      margin: EdgeInsets.only(left: 20),
-                                      child: Text('Victims')),
+                                      margin: const EdgeInsets.only(left: 20),
+                                      child: const Text('Victims')),
 
 ///////////////////////////////////////////////vollum////////////////////////////////
 
@@ -178,16 +178,16 @@ class Road_accidentState extends State<Road_accident> {
                                         ),
                                         child: IconButton(
                                             onPressed: () {},
-                                            icon: Icon(
+                                            icon: const Icon(
                                               Icons.add,
                                               color: Colors.white,
                                             )),
                                       ),
-                                      SizedBox(width: 20),
-                                      Text('0'),
-                                      SizedBox(width: 20),
+                                      const SizedBox(width: 20),
+                                      const Text('0'),
+                                      const SizedBox(width: 20),
                                       Container(
-                                        margin: EdgeInsets.only(right: 20),
+                                        margin: const EdgeInsets.only(right: 20),
                                         width: 40,
                                         height: 40,
                                         decoration: BoxDecoration(
@@ -197,7 +197,7 @@ class Road_accidentState extends State<Road_accident> {
                                         ),
                                         child: IconButton(
                                             onPressed: () {},
-                                            icon: Icon(
+                                            icon: const Icon(
                                               Icons.remove,
                                               color: Colors.white,
                                             )),
@@ -221,8 +221,8 @@ class Road_accidentState extends State<Road_accident> {
                                     MainAxisAlignment.spaceBetween,
                                 children: [
                                   Container(
-                                      margin: EdgeInsets.only(left: 20),
-                                      child: Text('Unconscious Victims  ')),
+                                      margin: const EdgeInsets.only(left: 20),
+                                      child: const Text('Unconscious Victims  ')),
                                   Row(
                                     children: [
                                       Container(
@@ -235,16 +235,16 @@ class Road_accidentState extends State<Road_accident> {
                                         ),
                                         child: IconButton(
                                             onPressed: () {},
-                                            icon: Icon(
+                                            icon: const Icon(
                                               Icons.add,
                                               color: Colors.white,
                                             )),
                                       ),
-                                      SizedBox(width: 20),
-                                      Text('0'),
-                                      SizedBox(width: 20),
+                                      const SizedBox(width: 20),
+                                      const Text('0'),
+                                      const SizedBox(width: 20),
                                       Container(
-                                        margin: EdgeInsets.only(right: 20),
+                                        margin: const EdgeInsets.only(right: 20),
                                         width: 40,
                                         height: 40,
                                         decoration: BoxDecoration(
@@ -254,7 +254,7 @@ class Road_accidentState extends State<Road_accident> {
                                         ),
                                         child: IconButton(
                                             onPressed: () {},
-                                            icon: Icon(
+                                            icon: const Icon(
                                               Icons.remove,
                                               color: Colors.white,
                                             )),
@@ -271,7 +271,7 @@ class Road_accidentState extends State<Road_accident> {
 
                         _image == null
                             ? Container(
-                                margin: EdgeInsets.only(
+                                margin: const EdgeInsets.only(
                                   right: 20,
                                   left: 20,
                                   top: 50,
@@ -282,11 +282,11 @@ class Road_accidentState extends State<Road_accident> {
                                     borderRadius: BorderRadius.circular(10),
                                     border: Border.all(
                                       width: 2,
-                                      color: Color(0xFFEEEDF0),
+                                      color: const Color(0xFFEEEDF0),
                                     ),
-                                    color: Color(0xFFEEEDF0)),
+                                    color: const Color(0xFFEEEDF0)),
                                 child: GestureDetector(
-                                    child: Column(
+                                    child: const Column(
                                       mainAxisAlignment:
                                           MainAxisAlignment.center,
                                       children: [
@@ -312,35 +312,35 @@ class Road_accidentState extends State<Road_accident> {
                                     }),
                               )
                             : Container(
-                                margin: EdgeInsets.only(
+                                margin: const EdgeInsets.only(
                                     top: 50, right: 20, left: 20),
                                 height: 280,
                                 width: screenw * 0.9,
                                 decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(10),
                                     border: Border.all(
-                                        width: 1, color: Color(0xFFEEEDF0))),
+                                        width: 1, color: const Color(0xFFEEEDF0))),
                                 child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(10),
                                   child: Image.file(
                                     File(_image!.path),
                                     fit: BoxFit.cover,
                                   ),
-                                  borderRadius: BorderRadius.circular(10),
                                 ),
                               ),
-                        SizedBox(height: 87),
+                        const SizedBox(height: 87),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             GestureDetector(
                               child: Container(
-                                margin: EdgeInsets.only(right: 24, left: 24),
+                                margin: const EdgeInsets.only(right: 24, left: 24),
                                 height: 48,
                                 width: screenw * 0.7,
                                 decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(10),
-                                    color: Color(0xffFE2430)),
-                                child: Center(
+                                    color: const Color(0xffFE2430)),
+                                child: const Center(
                                   child: Text(
                                     'Confirm',
                                     style: TextStyle(
@@ -357,13 +357,13 @@ class Road_accidentState extends State<Road_accident> {
                                     barrierDismissible: false,
                                     context: context,
                                     builder: (BuildContext context) {
-                                      Future.delayed(Duration(seconds: 6), () {
+                                      Future.delayed(const Duration(seconds: 6), () {
                                         Navigator.of(context).pop(true);
                                         Navigator.push(
                                             context,
                                             MaterialPageRoute(
                                                 builder: (context) =>
-                                                    submited()));
+                                                    const submited()));
                                       });
                                       return AlertDialog(
                                         backgroundColor: Colors.white10,

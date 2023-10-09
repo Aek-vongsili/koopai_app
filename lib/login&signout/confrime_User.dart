@@ -39,7 +39,7 @@ class _confrimloginState extends State<confrimlogin> {
     double screenh = MediaQuery.of(context).size.height;
     return Scaffold(
       appBar: AppBar(
-        title: Center(
+        title: const Center(
           child: Text('',
               style: TextStyle(
                   fontSize: 16,
@@ -49,7 +49,7 @@ class _confrimloginState extends State<confrimlogin> {
         elevation: 0,
         backgroundColor: Colors.white,
         leading: GestureDetector(
-          child: Icon(
+          child: const Icon(
             Icons.add,
           ),
           onTap: () {
@@ -62,7 +62,7 @@ class _confrimloginState extends State<confrimlogin> {
         child: Center(
           child: Column(
             children: [
-              Text(
+              const Text(
                 'ກະລູນາຖ່າຍຮູບເພື່ອຢືນຢັນຕົວຕົນ.',
                 style: TextStyle(
                     fontSize: 18,
@@ -71,7 +71,7 @@ class _confrimloginState extends State<confrimlogin> {
               ),
               _image == null
                   ? Container(
-                      margin: EdgeInsets.only(top: 120),
+                      margin: const EdgeInsets.only(top: 120),
                       height: 280,
                       width: 300,
                       decoration: BoxDecoration(
@@ -79,29 +79,29 @@ class _confrimloginState extends State<confrimlogin> {
                           border: Border.all(width: 1, color: Colors.grey)),
                     )
                   : Container(
-                      margin: EdgeInsets.only(top: 120),
+                      margin: const EdgeInsets.only(top: 120),
                       height: 280,
                       width: 300,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
                           border: Border.all(width: 1, color: Colors.grey)),
                       child: ClipRRect(
+                        borderRadius: BorderRadius.circular(10),
                         child: Image.file(
                           File(_image!.path),
                           fit: BoxFit.cover,
                         ),
-                        borderRadius: BorderRadius.circular(10),
                       ),
                     ),
               GestureDetector(
                   child: Container(
-                    margin: EdgeInsets.only(top: 10),
+                    margin: const EdgeInsets.only(top: 10),
                     height: 80,
                     width: 130,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
                         border: Border.all(width: 1, color: Colors.grey)),
-                    child: Icon(
+                    child: const Icon(
                       Icons.add_a_photo,
                       size: 50,
                       color: Color(0xFF293275),
@@ -117,10 +117,10 @@ class _confrimloginState extends State<confrimlogin> {
                   width: screenw * 0.6,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
-                      color: Color(0xFF293275)),
-                  child: Center(
+                      color: const Color(0xFF293275)),
+                  child: const Center(
                     child: Text(
-                      'Continuse',
+                      'Continue',
                       style: TextStyle(
                           fontSize: 14,
                           fontWeight: FontWeight.bold,
@@ -132,7 +132,7 @@ class _confrimloginState extends State<confrimlogin> {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => checkconfrime_user()));
+                          builder: (context) => const checkconfrime_user()));
                 },
               )
             ],

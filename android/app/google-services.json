@@ -1,36 +1,26 @@
 {
   "project_info": {
-    "project_number": "48211850452",
-    "project_id": "my-project1632",
-    "storage_bucket": "my-project1632.appspot.com"
+    "project_number": "147455817597",
+    "project_id": "koo-pai",
+    "storage_bucket": "koo-pai.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:48211850452:android:601efdaf00351b4617f741",
+        "mobilesdk_app_id": "1:147455817597:android:b4cad5c19f449bf626be14",
         "android_client_info": {
           "package_name": "com.example.app1623"
         }
       },
-      "oauth_client": [
-        {
-          "client_id": "48211850452-923n8rj3cjd3bqf9ve17vqssqbae9kvh.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
+      "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyCuzPO_rzOPYEiv1rmm3CnapOrjSXHgKlM"
+          "current_key": "AIzaSyCfNLw3wsVWYPS0CesrWuqwfQWbD1UyqgU"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "48211850452-923n8rj3cjd3bqf9ve17vqssqbae9kvh.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
+          "other_platform_oauth_client": []
         }
       }
     }

@@ -1,12 +1,9 @@
 import 'dart:io';
 
 import 'package:app1623/SlectEmergency/page/selecEmergency.dart';
-import 'package:app1623/homscreen/HomeScreenpage.dart';
 import 'package:app1623/submitted/page/submitted.dart';
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:loading_animation_widget/loading_animation_widget.dart';
 
@@ -37,14 +34,14 @@ class _Health_emercyState extends State<Health_emercy> {
     //Get.to(Edit_account());
   }
 
-  bool _isInitialValue = true;
+  final bool _isInitialValue = true;
   @override
   Widget build(BuildContext context) {
     double screenw = MediaQuery.of(context).size.width;
     double screenh = MediaQuery.of(context).size.height;
 
     return Scaffold(
-      backgroundColor: Color(0xFFEEEDF0),
+      backgroundColor: const Color(0xFFEEEDF0),
       body: SingleChildScrollView(
         // padding: EdgeInsets.only(left: 20,right: 20,top: 40,bottom: 40),
         child: Center(
@@ -52,12 +49,12 @@ class _Health_emercyState extends State<Health_emercy> {
             children: [
               AnimatedContainer(
                 duration: const Duration(milliseconds: 5),
-                color: Color(0xffEEEDF0),
+                color: const Color(0xffEEEDF0),
                 transform: _isInitialValue
                     ? Matrix4.identity()
                     : Matrix4.rotationX((45)),
                 child: Container(
-                    margin: EdgeInsets.only(
+                    margin: const EdgeInsets.only(
                         left: 24, right: 24, top: 50, bottom: 27),
                     height: 846,
                     width: 382,
@@ -87,15 +84,15 @@ class _Health_emercyState extends State<Health_emercy> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => SelectEmergency()));
+                                    builder: (context) => const SelectEmergency()));
                           },
                         ),
-                        SizedBox(height: 20),
+                        const SizedBox(height: 20),
                         Row(
                           children: [
                             Container(
-                              margin: EdgeInsets.only(left: 24),
-                              child: Column(
+                              margin: const EdgeInsets.only(left: 24),
+                              child: const Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text('Complete the',
@@ -115,17 +112,17 @@ class _Health_emercyState extends State<Health_emercy> {
                           ],
                         ),
                         Container(
-                          margin: EdgeInsets.only(top: 20, right: 20, left: 20),
+                          margin: const EdgeInsets.only(top: 20, right: 20, left: 20),
                           height: 60,
                           width: screenw * 0.9,
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10),
                               border: Border.all(
-                                  width: 2, color: Color(0xFFEEEDF0)),
+                                  width: 2, color: const Color(0xFFEEEDF0)),
                               color: Colors.white),
-                          child: Padding(
+                          child: const Padding(
                             padding: EdgeInsets.only(left: 20),
-                            child: Container(
+                            child: SizedBox(
                               height: 110,
                               child: TextField(
                                 decoration: InputDecoration(
@@ -140,7 +137,7 @@ class _Health_emercyState extends State<Health_emercy> {
                         ),
                         _image == null
                             ? Container(
-                                margin: EdgeInsets.only(
+                                margin: const EdgeInsets.only(
                                   right: 20,
                                   left: 20,
                                   top: 50,
@@ -151,11 +148,11 @@ class _Health_emercyState extends State<Health_emercy> {
                                     borderRadius: BorderRadius.circular(10),
                                     border: Border.all(
                                       width: 2,
-                                      color: Color(0xFFEEEDF0),
+                                      color: const Color(0xFFEEEDF0),
                                     ),
-                                    color: Color(0xFFEEEDF0)),
+                                    color: const Color(0xFFEEEDF0)),
                                 child: GestureDetector(
-                                    child: Column(
+                                    child: const Column(
                                       mainAxisAlignment:
                                           MainAxisAlignment.center,
                                       children: [
@@ -181,35 +178,35 @@ class _Health_emercyState extends State<Health_emercy> {
                                     }),
                               )
                             : Container(
-                                margin: EdgeInsets.only(
+                                margin: const EdgeInsets.only(
                                     top: 50, right: 20, left: 20),
                                 height: 280,
                                 width: screenw * 0.9,
                                 decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(10),
                                     border: Border.all(
-                                        width: 1, color: Color(0xFFEEEDF0))),
+                                        width: 1, color: const Color(0xFFEEEDF0))),
                                 child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(10),
                                   child: Image.file(
                                     File(_image!.path),
                                     fit: BoxFit.cover,
                                   ),
-                                  borderRadius: BorderRadius.circular(10),
                                 ),
                               ),
-                        SizedBox(height: 40),
+                        const SizedBox(height: 40),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             GestureDetector(
                               child: Container(
-                                margin: EdgeInsets.only(right: 24, left: 24),
+                                margin: const EdgeInsets.only(right: 24, left: 24),
                                 height: 48,
                                 width: screenw * 0.7,
                                 decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(10),
-                                    color: Color(0xffFE2430)),
-                                child: Center(
+                                    color: const Color(0xffFE2430)),
+                                child: const Center(
                                   child: Text(
                                     'Confirm',
                                     style: TextStyle(
@@ -221,13 +218,13 @@ class _Health_emercyState extends State<Health_emercy> {
                               ),
                               onTap: () {
                                 Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => submited()));
+                      MaterialPageRoute(builder: (context) => const submited()));
                   (Route) => true;
                                 showDialog(
                                     barrierDismissible: false,
                                     context: context,
                                     builder: (BuildContext context) {
-                                      Future.delayed(Duration(seconds: 6), () {
+                                      Future.delayed(const Duration(seconds: 6), () {
                                         Navigator.of(context).pop(true);
                                       });
                                       return AlertDialog(

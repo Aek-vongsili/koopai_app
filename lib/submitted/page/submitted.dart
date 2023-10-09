@@ -1,10 +1,6 @@
 import 'package:app1623/Rescued/page/Rescued.dart';
-import 'package:app1623/homscreen/HomeScreenpage.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 
-import '../../SlectEmergency/page/selecEmergency.dart';
 
 class submited extends StatefulWidget {
   const submited({super.key});
@@ -19,12 +15,12 @@ class _submitedState extends State<submited> {
     double screenw = MediaQuery.of(context).size.width;
     double screenh = MediaQuery.of(context).size.height;
     return Scaffold(
-        backgroundColor: Color(0xffEEEDF0),
+        backgroundColor: const Color(0xffEEEDF0),
         body: SingleChildScrollView(
           child: Container(
-            margin: EdgeInsets.only(top: 50, left: 24, right: 22),
+            margin: const EdgeInsets.only(top: 50, left: 24, right: 22),
             height: 846,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               color: Colors.white,
             ),
             child: Column(
@@ -32,7 +28,7 @@ class _submitedState extends State<submited> {
                 Container(
                   height: 699,
                   width: screenw,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                       color: Color(0xffEF3939),
                       borderRadius: BorderRadius.only(
                           bottomLeft: Radius.circular(32),
@@ -59,13 +55,13 @@ class _submitedState extends State<submited> {
                           Navigator.pop(context);
                         },
                       ),
-                      SizedBox(height: 179),
+                      const SizedBox(height: 179),
                       Row(
                         children: [
                           Container(
                             width: 87,
                             height: 87,
-                            margin: EdgeInsets.only(left: 20),
+                            margin: const EdgeInsets.only(left: 20),
                             child: Image.asset(
                                 'icons/Icon ionic-md-checkmark-circle-outline.png'),
                           )
@@ -75,8 +71,8 @@ class _submitedState extends State<submited> {
                         children: [
                           Container(
                             height: 53,
-                            margin: EdgeInsets.only(left: 20),
-                            child: Text(
+                            margin: const EdgeInsets.only(left: 20),
+                            child: const Text(
                               'Submitted',
                               style: TextStyle(
                                   fontSize: 44,
@@ -89,8 +85,8 @@ class _submitedState extends State<submited> {
                       Row(
                         children: [
                           Container(
-                            margin: EdgeInsets.only(left: 20),
-                            child: Text(
+                            margin: const EdgeInsets.only(left: 20),
+                            child: const Text(
                               'Your Emegency Request has been sent',
                               style: TextStyle(
                                   fontSize: 15,
@@ -110,22 +106,22 @@ class _submitedState extends State<submited> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Container(
-                            margin: EdgeInsets.only(left: 27, top: 26),
-                            child: Text('Emergency Number')),
+                            margin: const EdgeInsets.only(left: 27, top: 26),
+                            child: const Text('Emergency Number')),
                         Container(
                             margin:
-                                EdgeInsets.only(left: 27, top: 26, right: 24),
-                            child: Text('Date&Time')),
+                                const EdgeInsets.only(left: 27, top: 26, right: 24),
+                            child: const Text('Date&Time')),
                       ],
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Container(
-                            margin: EdgeInsets.only(
+                            margin: const EdgeInsets.only(
                               left: 27,
                             ),
-                            child: Text(
+                            child: const Text(
                               '#00122',
                               style: TextStyle(
                                   fontSize: 15,
@@ -133,8 +129,8 @@ class _submitedState extends State<submited> {
                                   fontWeight: FontWeight.bold),
                             )),
                         Container(
-                          margin: EdgeInsets.only(left: 27, right: 24),
-                          child: Text(
+                          margin: const EdgeInsets.only(left: 27, right: 24),
+                          child: const Text(
                             '18/7/2023 15:28',
                             style: TextStyle(
                                 fontSize: 15,
@@ -146,16 +142,16 @@ class _submitedState extends State<submited> {
                     ),
                   ],
                 ),
-                SizedBox(height: 26),
+                const SizedBox(height: 26),
                 GestureDetector(
                   child: Container(
                     height: 48,
                     width: 335,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
-                      color: Color(0xffEF3939),
+                      color: const Color(0xffEF3939),
                     ),
-                    child: Center(
+                    child: const Center(
                         child: Text(
                       'Done',
                       style: TextStyle(
@@ -166,7 +162,7 @@ class _submitedState extends State<submited> {
                   ),
                   onTap: () {
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (builder) => MapSample()));
+                        MaterialPageRoute(builder: (builder) => const MapSample()));
                     
                   },
                 )

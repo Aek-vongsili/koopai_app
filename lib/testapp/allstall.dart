@@ -22,7 +22,7 @@ class _AllStoresState extends State<AllStores> {
       double storelat = data.allstores[i]['lat'];
       double storelng = data.allstores[i]['lng'];
 
-      distanceImMeter = await Geolocator.distanceBetween(
+      distanceImMeter = Geolocator.distanceBetween(
         _currentUserPosition!.latitude,
         _currentUserPosition!.longitude,
         storelat,
@@ -48,14 +48,14 @@ class _AllStoresState extends State<AllStores> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        backgroundColor: Color(0xff2980b9),
-        title: Text("All Stores Near you"),
+        backgroundColor: const Color(0xff2980b9),
+        title: const Text("All Stores Near you"),
       ),
       body: Padding(
         padding: const EdgeInsets.fromLTRB(10, 30, 10, 0),
         child: GridView.builder(
             itemCount: data.allstores.length,
-            gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
+            gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
               maxCrossAxisExtent: 200,
               childAspectRatio: 3 / 3,
               crossAxisSpacing: 10,
@@ -63,12 +63,12 @@ class _AllStoresState extends State<AllStores> {
             ),
             itemBuilder: (context, index) {
               return Container(
-                color: Color(0xff3498db),
+                color: const Color(0xff3498db),
                 height: height * 0.9,
                 width: width,
                 child: Column(
                   children: [
-                    Container(
+                    SizedBox(
                       height: height * 0.12,
                       width: width,
                       child: Image.network(
@@ -76,25 +76,25 @@ class _AllStoresState extends State<AllStores> {
                         fit: BoxFit.fill,
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 15,
                     ),
                     Text(
                       data.allstores[index]['name'],
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontSize: 18,
                         fontWeight: FontWeight.bold,
                         color: Colors.white,
                       ),
                     ),
-                    SizedBox(height: 5),
+                    const SizedBox(height: 5),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Icon(Icons.location_on),
+                        const Icon(Icons.location_on),
                         Text(
                           "${data.allstores[index]['distance'].round()} KM Away",
-                          style: TextStyle(
+                          style: const TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.bold,
                             color: Colors.white,

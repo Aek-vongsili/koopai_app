@@ -1,9 +1,6 @@
 
 import 'package:app1623/login&signout/page/login.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 
 class checkconfrime_user extends StatefulWidget {
   const checkconfrime_user({super.key});
@@ -19,12 +16,12 @@ class _checkconfrime_userState extends State<checkconfrime_user> {
     double screenh = MediaQuery.of(context).size.height;
     return Scaffold(
       appBar: AppBar(
-        title: Center(
+        title: const Center(
           child: Text('ກວດສອບການລົງທະບຽນ',
               style: TextStyle(fontSize: 18, color: Colors.white,fontWeight: FontWeight.bold)),
         ),
         elevation: 0,
-        backgroundColor:  Color(0xFF293275),
+        backgroundColor:  const Color(0xFF293275),
         
       ),
       body: SingleChildScrollView(
@@ -32,10 +29,10 @@ class _checkconfrime_userState extends State<checkconfrime_user> {
           child: Column(
             children: [
               Container(
-                margin: EdgeInsets.only(top: 80),
+                margin: const EdgeInsets.only(top: 80),
                 height: 80,
                 width: 300,
-                child: Column(
+                child: const Column(
                   children: [
                     Text('ການສະໝັກສະມາຊິກ',
                         style: TextStyle(
@@ -53,7 +50,7 @@ class _checkconfrime_userState extends State<checkconfrime_user> {
                 ),
               ),
               Container(
-                margin: EdgeInsets.only(top: 20),
+                margin: const EdgeInsets.only(top: 20),
                 height: 280,
                 width: 300,
                 decoration: BoxDecoration(
@@ -61,8 +58,8 @@ class _checkconfrime_userState extends State<checkconfrime_user> {
                     border: Border.all(
                       width: 1,
                     ),
-                    color: Color(0xFF293275)),
-                child: Center(
+                    color: const Color(0xFF293275)),
+                child: const Center(
                   child: Text('ກະລຸນາລໍຖ້າການກວດສອບ!',
                       style: TextStyle(
                           fontSize: 18,
@@ -70,7 +67,7 @@ class _checkconfrime_userState extends State<checkconfrime_user> {
                           color: Colors.white)),
                 ),
               ), 
-                    SizedBox(height: 20),Center(
+                    const SizedBox(height: 20),const Center(
                 child: Text('ຂໍຂອບໃຈ',style: TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.bold,
@@ -83,8 +80,8 @@ class _checkconfrime_userState extends State<checkconfrime_user> {
                   width: screenw * 0.6,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
-                      color: Color(0xFF293275)),
-                  child: Center(
+                      color: const Color(0xFF293275)),
+                  child: const Center(
                     child: Text(
                       'ກັບຄຶນສູ່ໜ້າຫຼັກ',
                       style: TextStyle(
@@ -96,7 +93,7 @@ class _checkconfrime_userState extends State<checkconfrime_user> {
                 ),
                 onTap: () {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => Login()));
+                      MaterialPageRoute(builder: (context) => const Login()));
                 },
               ),
              

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage({ key, }) : super(key: key);
+  const MyHomePage({ key, }) : super(key: key);
 
 
 
@@ -17,16 +17,16 @@ class _MyHomePageState extends State<MyHomePage> {
 
   List<BottomNavigationBarItem> buildBottomNavBarItems() {
     return [
-      BottomNavigationBarItem(
-          icon: new Icon(Icons.home),
+      const BottomNavigationBarItem(
+          icon: Icon(Icons.home),
           backgroundColor: Color(0xffFE2430),
          label: 'red'
       ),
-      BottomNavigationBarItem(
-        icon: new Icon(Icons.search),
+      const BottomNavigationBarItem(
+        icon: Icon(Icons.search),
        label: 'Blue'
       ),
-      BottomNavigationBarItem(
+      const BottomNavigationBarItem(
           icon: Icon(Icons.info_outline),
         label: 'Yellow'
       )
@@ -44,7 +44,7 @@ class _MyHomePageState extends State<MyHomePage> {
       onPageChanged: (index) {
         pageChanged(index);
       },
-      children: <Widget>[
+      children: const <Widget>[
         Red(),
         Blue(),
         Yellow(),
@@ -66,7 +66,7 @@ class _MyHomePageState extends State<MyHomePage> {
   void bottomTapped(int index) {
     setState(() {
       bottomSelectedIndex = index;
-      pageController.animateToPage(index, duration: Duration(milliseconds: 500), curve: Curves.ease);
+      pageController.animateToPage(index, duration: const Duration(milliseconds: 500), curve: Curves.ease);
     });
   }
 
@@ -74,7 +74,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('test'),
+        title: const Text('test'),
       ),
       body: buildPageView(),
       bottomNavigationBar: BottomNavigationBar(
@@ -91,6 +91,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
 
 class Red extends StatefulWidget {
+  const Red({super.key});
+
   @override
   _RedState createState() => _RedState();
 }
@@ -105,6 +107,8 @@ class _RedState extends State<Red> {
 }
 
 class Blue extends StatefulWidget {
+  const Blue({super.key});
+
   @override
   _BlueState createState() => _BlueState();
 }
@@ -119,6 +123,8 @@ class _BlueState extends State<Blue> {
 }
 
 class Yellow extends StatefulWidget {
+  const Yellow({super.key});
+
   @override
   _YellowState createState() => _YellowState();
 }

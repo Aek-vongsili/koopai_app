@@ -1,11 +1,6 @@
-import 'dart:collection';
 
 import 'package:app1623/login&signout/confrime_User.dart';
-import 'package:app1623/login&signout/page/login.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
-import 'package:get/get.dart';
 import 'package:intl/intl.dart';
 
 class Register extends StatefulWidget {
@@ -31,13 +26,12 @@ class _RegisterState extends State<Register> {
     return Scaffold(
       backgroundColor: Colors.white,
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-    
       body: SingleChildScrollView(
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              SizedBox(height: 70),
+              const SizedBox(height: 70),
               Padding(
                 padding: const EdgeInsets.only(left: 20, right: 20),
                 child: Container(
@@ -47,7 +41,7 @@ class _RegisterState extends State<Register> {
                     borderRadius: BorderRadius.circular(10),
                     border: Border.all(width: 1, color: Colors.grey),
                   ),
-                  child: Padding(
+                  child: const Padding(
                     padding: EdgeInsets.only(left: 10),
                     child: TextField(
                       decoration: InputDecoration(
@@ -56,7 +50,7 @@ class _RegisterState extends State<Register> {
                   ),
                 ),
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               Padding(
                 padding: const EdgeInsets.only(left: 20, right: 20),
                 child: Container(
@@ -66,7 +60,7 @@ class _RegisterState extends State<Register> {
                     borderRadius: BorderRadius.circular(10),
                     border: Border.all(width: 1, color: Colors.grey),
                   ),
-                  child: Padding(
+                  child: const Padding(
                     padding: EdgeInsets.only(left: 10),
                     child: TextField(
                       decoration: InputDecoration(
@@ -77,7 +71,7 @@ class _RegisterState extends State<Register> {
                   ),
                 ),
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
 
               /////////////dropdown///////////////
               Padding(
@@ -94,7 +88,7 @@ class _RegisterState extends State<Register> {
                           border: Border.all(width: 1, color: Colors.grey),
                         ),
                         child: Padding(
-                          padding: EdgeInsets.only(left: 10),
+                          padding: const EdgeInsets.only(left: 10),
                           child: DropdownButton(
                             value: dropdownvalue,
                             icon: const Icon(Icons.keyboard_arrow_down),
@@ -115,7 +109,7 @@ class _RegisterState extends State<Register> {
                     ),
                     //////////////end dropdown////////////
 
-                    SizedBox(width: 10),
+                    const SizedBox(width: 10),
                     Container(
                       height: 50,
                       width: screenw * 0.3,
@@ -124,14 +118,14 @@ class _RegisterState extends State<Register> {
                         border: Border.all(width: 1, color: Colors.grey),
                       ),
                       child: Padding(
-                        padding: EdgeInsets.only(left: 10),
+                        padding: const EdgeInsets.only(left: 10),
                         child: TextField(
                           decoration: InputDecoration(
                               hintText: dateday, border: InputBorder.none),
                         ),
                       ),
                     ),
-                    SizedBox(width: 10),
+                    const SizedBox(width: 10),
                     Container(
                       height: 50,
                       width: screenw * 0.3,
@@ -139,7 +133,7 @@ class _RegisterState extends State<Register> {
                         borderRadius: BorderRadius.circular(10),
                         border: Border.all(width: 1, color: Colors.grey),
                       ),
-                      child: Padding(
+                      child: const Padding(
                         padding: EdgeInsets.only(left: 10),
                         child: TextField(
                           decoration: InputDecoration(
@@ -150,7 +144,7 @@ class _RegisterState extends State<Register> {
                   ],
                 ),
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               Padding(
                 padding: const EdgeInsets.only(left: 20, right: 20),
                 child: Container(
@@ -160,7 +154,7 @@ class _RegisterState extends State<Register> {
                     borderRadius: BorderRadius.circular(10),
                     border: Border.all(width: 1, color: Colors.grey),
                   ),
-                  child: Padding(
+                  child: const Padding(
                     padding: EdgeInsets.only(left: 10),
                     child: TextField(
                       decoration: InputDecoration(
@@ -169,7 +163,7 @@ class _RegisterState extends State<Register> {
                   ),
                 ),
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               Padding(
                 padding: const EdgeInsets.only(left: 20, right: 20),
                 child: Container(
@@ -179,7 +173,7 @@ class _RegisterState extends State<Register> {
                     borderRadius: BorderRadius.circular(10),
                     border: Border.all(width: 1, color: Colors.grey),
                   ),
-                  child: Padding(
+                  child: const Padding(
                     padding: EdgeInsets.only(left: 10),
                     child: TextField(
                       decoration: InputDecoration(
@@ -188,7 +182,7 @@ class _RegisterState extends State<Register> {
                   ),
                 ),
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               Padding(
                 padding: const EdgeInsets.only(left: 20, right: 20),
                 child: Container(
@@ -198,7 +192,7 @@ class _RegisterState extends State<Register> {
                     borderRadius: BorderRadius.circular(10),
                     border: Border.all(width: 1, color: Colors.grey),
                   ),
-                  child: Padding(
+                  child: const Padding(
                     padding: EdgeInsets.only(left: 10),
                     child: TextField(
                       decoration: InputDecoration(
@@ -207,7 +201,7 @@ class _RegisterState extends State<Register> {
                   ),
                 ),
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               Padding(
                 padding: const EdgeInsets.only(left: 20, right: 20),
                 child: Container(
@@ -217,7 +211,7 @@ class _RegisterState extends State<Register> {
                     borderRadius: BorderRadius.circular(10),
                     border: Border.all(width: 1, color: Colors.grey),
                   ),
-                  child: Padding(
+                  child: const Padding(
                     padding: EdgeInsets.only(left: 10),
                     child: TextField(
                       decoration: InputDecoration(
@@ -233,8 +227,8 @@ class _RegisterState extends State<Register> {
                   width: screenw * 0.6,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
-                      color: Color(0xFF293275)),
-                  child: Center(
+                      color: const Color(0xFF293275)),
+                  child: const Center(
                     child: Text(
                       'Register',
                       style: TextStyle(
@@ -246,7 +240,7 @@ class _RegisterState extends State<Register> {
                 ),
                 onTap: () {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => confrimlogin()));
+                      MaterialPageRoute(builder: (context) => const confrimlogin()));
                 },
               )
             ],

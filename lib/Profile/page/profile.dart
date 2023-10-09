@@ -1,9 +1,7 @@
 import 'dart:io';
 import 'package:app1623/homscreen/HomeScreenpage.dart';
-import 'package:app1623/login&signout/page/login.dart';
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:intl/intl.dart';
 
@@ -45,7 +43,7 @@ class _ProfileState extends State<Profile> {
     double screenw = MediaQuery.of(context).size.width;
     double screenh = MediaQuery.of(context).size.height;
     return Scaffold(
-      backgroundColor: Color(0xffEEEDF0),
+      backgroundColor: const Color(0xffEEEDF0),
       bottomNavigationBar: SafeArea(
           child: Padding(
         padding: const EdgeInsets.only(right: 24, left: 24),
@@ -58,12 +56,12 @@ class _ProfileState extends State<Profile> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Container(
-                margin: EdgeInsets.only(left: 15, right: 15),
+                margin: const EdgeInsets.only(left: 15, right: 15),
                 width: 136,
                 height: 51,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
-                    color: Color(0xFFFE2430)),
+                    color: const Color(0xFFFE2430)),
                 child: TextButton.icon(
                     onPressed: () {},
                     icon: Image.asset(
@@ -72,7 +70,7 @@ class _ProfileState extends State<Profile> {
                       width: 27,
                       height: 26.74,
                     ),
-                    label: Text(
+                    label: const Text(
                       'Home',
                       style: TextStyle(color: Colors.white, fontSize: 20),
                     )),
@@ -131,12 +129,12 @@ class _ProfileState extends State<Profile> {
               borderRadius: BorderRadius.circular(15),
               color: Colors.white,
             ),
-            margin: EdgeInsets.only(left: 24, right: 24, top: 50, bottom: 126),
+            margin: const EdgeInsets.only(left: 24, right: 24, top: 50, bottom: 126),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Container(
-                    margin: EdgeInsets.only(top: 27),
+                    margin: const EdgeInsets.only(top: 27),
                     height: 54,
                     width: screenw,
                     decoration: BoxDecoration(
@@ -150,7 +148,7 @@ class _ProfileState extends State<Profile> {
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Text(
+                            const Text(
                               'Account Details',
                               style: TextStyle(
                                   fontSize: 20,
@@ -167,7 +165,7 @@ class _ProfileState extends State<Profile> {
                                 Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (context) => HomSreenpage()));
+                                        builder: (context) => const HomSreenpage()));
                               },
                             )
                           ],
@@ -175,7 +173,7 @@ class _ProfileState extends State<Profile> {
                       ),
                     )),
 
-                SizedBox(height: 46),
+                const SizedBox(height: 46),
                 _image == null
                     ? GestureDetector(
                         child: Container(
@@ -201,26 +199,26 @@ class _ProfileState extends State<Profile> {
                             child: Image.file(File(_image!.path))),
                       ),
 
-                SizedBox(height: 10),
+                const SizedBox(height: 10),
                 Padding(
                   padding: const EdgeInsets.only(left: 20, right: 20),
-                  child: Container(
+                  child: SizedBox(
                     height: 50,
                     width: screenw,
                     // color: Colors.amber,
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text('Name'),
-                        Text('Kettakoun'),
+                        const Text('Name'),
+                        const Text('Kettakoun'),
                         IconButton(
                             onPressed: () {},
-                            icon: Icon(Icons.arrow_forward_ios))
+                            icon: const Icon(Icons.arrow_forward_ios))
                       ],
                     ),
                   ),
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 Padding(
                   padding: const EdgeInsets.only(left: 20, right: 20),
                   child: Container(
@@ -232,11 +230,11 @@ class _ProfileState extends State<Profile> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text('Surname'),
-                        Text('Kounlavong'),
+                        const Text('Surname'),
+                        const Text('Kounlavong'),
                         IconButton(
                             onPressed: () {},
-                            icon: Icon(Icons.arrow_forward_ios))
+                            icon: const Icon(Icons.arrow_forward_ios))
                       ],
                     ),
                   ),
@@ -313,7 +311,7 @@ class _ProfileState extends State<Profile> {
                 //     ],
                 //   ),
                 // ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 Padding(
                   padding: const EdgeInsets.only(left: 20, right: 20),
                   child: Container(
@@ -325,16 +323,16 @@ class _ProfileState extends State<Profile> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text('Phone'),
-                        Text('+8562056555550'),
+                        const Text('Phone'),
+                        const Text('+8562056555550'),
                         IconButton(
                             onPressed: () {},
-                            icon: Icon(Icons.arrow_forward_ios))
+                            icon: const Icon(Icons.arrow_forward_ios))
                       ],
                     ),
                   ),
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 Padding(
                   padding: const EdgeInsets.only(left: 20, right: 20),
                   child: Container(
@@ -346,16 +344,16 @@ class _ProfileState extends State<Profile> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text('ID or Passport'),
-                        Text('0561567'),
+                        const Text('ID or Passport'),
+                        const Text('0561567'),
                         IconButton(
                             onPressed: () {},
-                            icon: Icon(Icons.arrow_forward_ios))
+                            icon: const Icon(Icons.arrow_forward_ios))
                       ],
                     ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 38,
                 ),
                 Container(
@@ -363,7 +361,7 @@ class _ProfileState extends State<Profile> {
                   height: 200,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
-                    color: Color(0xffEEEDF0),
+                    color: const Color(0xffEEEDF0),
                   ),
                   child: Center(
                     child: Column(
@@ -375,8 +373,8 @@ class _ProfileState extends State<Profile> {
                             getimage1();
                           },
                         ),
-                        SizedBox(height: 14.75),
-                        Text('Take Your ID or Passport Photo')
+                        const SizedBox(height: 14.75),
+                        const Text('Take Your ID or Passport Photo')
                       ],
                     ),
                   ),
